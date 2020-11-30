@@ -1,0 +1,59 @@
+body {
+    background-image: url("https://previews.123rf.com/images/amaomam/amaomam2003/amaomam200300021/141511950-teddy-bear-and-rainbow-seamless-background-repeating-pattern-wallpaper-background-cute-seamless-patt.jpg");
+}
+
+.intro {
+    font-family: 'Nerko One', cursive;
+    font-size: 80px;
+}
+
+.intro-para {
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    
+    
+}
+
+
+#cardTeddies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    
+
+}
+
+.card-body {
+    border-top: 1px solid #0275d8;
+    
+    
+}
+
+
+.card {
+    margin: 0px 0px 100px 0px;
+    /*
+    box-shadow: 10px 5px 5px#0275d8;
+    */
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+}
+
+.card h5 {
+    font-family: 'Nerko One', cursive;
+}
+
+.card img {
+    height: 300px;
+   
+}
+
+#footer {
+    margin: 0;
+}
