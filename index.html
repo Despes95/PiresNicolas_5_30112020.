@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,7 +46,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
                 <h1 class="intro text-center m-5" id="teddy">Nounours tout doux</h1>
-                <p class="intro-para text-center m-5 mt-0">Choissisez le votre</p>
+                <p class="intro-para text-center m-5">Choissisez le votre</p>
             </div>
         </div>
     </section>
@@ -73,16 +73,16 @@
         <div id="cardTeddies"></div>
     </section>
 
-<script>
-    let request = new XMLHttpRequest();
-request.onreadystatechange = function () {
-    if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        let product = JSON.parse(this.responseText);
-        console.table(product)
-        let cardTeddies = document.getElementById('cardTeddies')
+    <!--     <script>
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                let product = JSON.parse(this.responseText);
+                console.table(product)
+                let cardTeddies = document.getElementById('cardTeddies')
 
-        product.forEach(teddies => {
-            cardTeddies.innerHTML += `    
+                product.forEach(teddies => {
+                    cardTeddies.innerHTML += `    
                 <div class="card text-center border rounded"style="width: 450px;">
                     <img src="${teddies.imageUrl}" class="card-img-top bg-transparent"  alt="...">
                     <div class="card-body">
@@ -93,13 +93,12 @@ request.onreadystatechange = function () {
                     </div>
                 </div>
                 `
-        });
-    }
-};
-request.open("GET", "http://localhost:3000/api/teddies")
-request.send()
-
-</script>
+                });
+            }
+        };
+        request.open("GET", "http://localhost:3000/api/teddies")
+        request.send()
+    </script> -->
 
 
 
@@ -116,7 +115,7 @@ request.send()
                 class="fas fa-envelope-open-text"></i> Contactez-nous.</a>
     </footer>
 
-
+    <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
