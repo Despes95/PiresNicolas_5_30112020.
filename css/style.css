@@ -1,6 +1,6 @@
 body {
     background-image: url("https://previews.123rf.com/images/amaomam/amaomam2003/amaomam200300021/141511950-teddy-bear-and-rainbow-seamless-background-repeating-pattern-wallpaper-background-cute-seamless-patt.jpg");
-    line-height: 1.1 !important;
+    
 }
 
 .navbar {
@@ -8,14 +8,19 @@ body {
 }
 
 
-#cardProduct {
-    margin: auto !important;
-    width: 450px;
+#cardItem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    
 }
 
 .intro {
     font-family: 'Nerko One', cursive;
     font-size: 70px;
+    line-height: .7 !important;
 }
 
 .intro-para {
@@ -23,6 +28,7 @@ body {
     font-family: 'Dancing Script', cursive;
     color: rgb(110, 208, 238);
     text-shadow: 3px 0 rgb(0, 0, 0), 0 3px rgb(245, 128, 219), 3px 0 rgb(245, 128, 219), 0 -1px rgb(245, 128, 219);
+    line-height: .7 !important;
 }
 
 
@@ -32,12 +38,24 @@ body {
     justify-content: space-around;
     margin-bottom: 40px;
     padding-top: 20px;
-
-
 }
 
+.prix {
+    color: rgb(110, 208, 238);
+    font-weight: 900;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    font-size: 25px !important;
+    font-family: 'Nerko One', cursive;
+    color: rgb(245, 128, 219) !important;
+}
+
+
+
 .card-body {
-    border-top: 1px solid #0275d8;
+    border-top: 1px solid rgb(110, 208, 238) ;
 }
 
 .btn:hover {
@@ -50,23 +68,29 @@ body {
     margin: 0px 0px 100px 0px;
     box-shadow: 5px 5px 5px black;
     border-radius: 25px !important;
+    line-height: 1.1 !important;
 }
 
 .card p {
     font-size: 25px;
     font-weight: 900;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Nerko One', cursive;
 }
 
 .font {
     font-family: 'Nerko One', cursive;
     font-size: 30px;
+    color: rgb(245, 128, 219) !important;
 }
 
 .card img {
-    height: 300px;
+    height: 280px;
     border-radius: 25px 25px 0px 0px !important;
 
+}
+
+#titre2 {
+    margin-bottom: 40px !important;
 }
 
 #footer {
