@@ -8,9 +8,10 @@ body {
 }
 
 
+
 #cardItem {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     margin-bottom: 40px;
     padding-top: 20px;
@@ -31,14 +32,15 @@ body {
     line-height: .7 !important;
 }
 
-
-#cardTeddies {
+.container-xl {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 40px;
     padding-top: 20px;
 }
+
+
 
 .prix {
     color: rgb(110, 208, 238);
