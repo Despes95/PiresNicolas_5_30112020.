@@ -4,6 +4,6 @@ function fetchData(path = '') {
 }
 
 function toJson(productList) {
-    console.info('TO JSON')
+    console.log(productList)
     return productList.json()
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nerko+One&display=swap"
         rel="stylesheet">
-
     <title>Nounours tout doux</title>
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
             <a class="text-decoration-none" href="index.html"><img src="images/logo.png" alt="logo"></a>
@@ -30,11 +30,6 @@
                         <a class="nav-link text-decoration-none text-white" href="confirmation.html"><i
                                 class="fas fa-paw"></i> Commande</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link text-decoration-none text-white" href="panier.html"><i
-                                class="fas fa-shopping-cart"></i> Panier</a>
-
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,21 +39,65 @@
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
                 <h1 class="intro text-center m-2" id="teddy">Nounours tout doux</h1>
-                <p id="titre2" class="intro-para text-center m-4">Choissisez la couleur</p>
+                <p id="titre" class="intro-para text-center m-4">Validez votre panier</p>
             </div>
         </div>
     </section>
 
-    <section id="div1" class="container-xl"></section>
+    <section id="recap" class="container-xl"></section>
+    <section id="test" class="container-xl"></section>
+ 
+
+
+
+    <section id="div1" class="container-xl">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Prenom</label>
+                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="validationCustom02" value="" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Adresse Mail</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="validationCustom03" class="form-label">Ville</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary" type="submit">Confirmation Panier</button>
+            </div>
+        </form>
+    </section>
+
+
+
 
     <footer id="footer" class="d-flex justify-content-center pt-4 pb-4 bg-primary">
         <a class="text-decoration-none pr-2 text-white" href="mailto:contact@orinoco.com"><i
                 class="fas fa-envelope-open-text"></i> Contactez-nous.</a>
     </footer>
 
-    <script src="js/requests.js" defer></script>
-    <script src="js/views.js" defer></script>
-    <script src="js/details.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -70,6 +109,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+    <script src="js/requests.js" defer></script>
+    <script src="js/panier.js" defer></script>
 </body>
 
 </html>

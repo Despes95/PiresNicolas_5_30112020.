@@ -7,7 +7,9 @@ body {
     box-shadow: 5px 5px 5px black;
 }
 
-
+#panierImg {
+    border-radius: 25px !important;
+}
 
 #cardItem {
     display: flex;
@@ -18,9 +20,14 @@ body {
     
 }
 
+#teddy {
+    margin-top: 30px!important;
+    margin-bottom: 40px !important;
+}
+
 .intro {
     font-family: 'Nerko One', cursive;
-    font-size: 70px;
+    font-size: 60px;
     line-height: .7 !important;
 }
 
