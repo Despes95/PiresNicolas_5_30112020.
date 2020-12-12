@@ -32,55 +32,42 @@ function displayProductDetails(product) {
         ${descriptionDisplayed}
         ${priceDisplayed}
         ${optionDisplayed}
+    <div class="form-group">
         <a href="" id="btn" class="btn btn-primary"><i class="fas fa-cart-arrow-down">
         </i> Ajouter au panier</a>
-    </div>
 </div>
 `
 }///////////////////End Page Presentation Teddies Selctionner////////////////////////
 
 /////////////////// Page Panier////////////////////////
-function displayProductPanier(product) {
+/* function displayProductPanier(product) {
     const imageDisplayed = displayImage(product)
     const priceDisplayed = displayPrice(product)
     const nameDisplayed = displayTitle(product)
     const descriptionDisplayed = displayDescription(product)
     
-    /* return `
-    <div class="card mb-3" style="max-width: 1440px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                ${imageDisplayed}
-                <button class="btn1 btn-primary">Vider Panier</button>
-            </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <div class="row justify-content-around text-center mb-5">
-                            <div class="col-md-3 basket-title d-none d-md-block">
-                                Produits Sélectionnés
-                                ${nameDisplayed}
-                            </div>
-                            <div class="col-md-3 basket-title d-none d-md-block">
-                                couleur Sélectionnées
-                            </div>
-                            <div class="col-md-3 basket-title d-none d-md-block">
-                                Quantites
-                            </div>
-                            <div class="col-md-3 basket-title d-none d-md-block">
-                                total de la commande
-                                ${priceDisplayed}
-                            </div>
-                        </div>
-                        ${descriptionDisplayed}
-                        <p class="card-text">Achetez sans tracas. En cas de rétractation,
-                         nous prenons en charge les frais de retours.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-` */
-}///////////////////End Page Panier////////////////////////
+     return `
+    <table class="table bg-light">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><img id=panierImg class="img-fluid" src="${teddiesPanier[0].imageUrl}"  style="max-width: 40px;"></td>
+            <td><h5 class="font card-title">${teddiesPanier[0].name}</h5></td>
+            <td><p class="card-text prix">${teddiesPanier[0].price / 100}€</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <td><button onclick="removeProduct('${product}')" class="btn btn-primary">Supprimer</button></td>
+` 
+} *////////////////////End Page Panier////////////////////////
 
 
 /////////////////// Fonction Image////////////////////////
@@ -112,3 +99,4 @@ function displayOption(product) {
     }
     return `<select id= "option" class="form-control">${options}</select>`
 }
+

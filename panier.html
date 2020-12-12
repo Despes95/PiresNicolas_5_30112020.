@@ -44,7 +44,6 @@
         </div>
     </section>
 
-    <section id="recap" class="container-xl"></section>
     <section id="test" class="container-xl"></section>
  
 
@@ -73,19 +72,26 @@
                     <input type="text" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
-                        Please choose a username.
+                        Veuillez choisir une adresse mail.
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Veuillez choisir une adresse.
+                </div>
+            </div>
+            <div class="col-md-6">
                 <label for="validationCustom03" class="form-label">Ville</label>
                 <input type="text" class="form-control" id="validationCustom03" required>
                 <div class="invalid-feedback">
-                    Please provide a valid city.
+                    Veuillez choisir une ville.
                 </div>
             </div>
             <div class="col-12 text-center">
-                <button class="btn btn-primary" type="submit">Confirmation Panier</button>
+                <button id="envoyer" class="btn btn-primary" type="submit">Confirmation Panier</button>
             </div>
         </form>
     </section>
@@ -93,7 +99,7 @@
 
 
 
-    <footer id="footer" class="d-flex justify-content-center pt-4 pb-4 bg-primary">
+    <footer id="footer" class="d-flex justify-content-center pt-4 pb-4 bg-primary fixed-bottom">
         <a class="text-decoration-none pr-2 text-white" href="mailto:contact@orinoco.com"><i
                 class="fas fa-envelope-open-text"></i> Contactez-nous.</a>
     </footer>

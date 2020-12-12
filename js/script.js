@@ -13,12 +13,3 @@ function displayList(products, root) {
     var container = document.getElementsByClassName("container-xl")[0]
     displayList(productsJson, container)
 })()
-
-/* async function loadPage() {
-    const productsList = await fetchData()
-    const productsJson = await toJson(productsList)
-    var container = document.getElementsByClassName("container-xl")[0]
-    displayList(productsJson, container)
-  }
-  
-  loadPage() */

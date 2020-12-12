@@ -11,6 +11,11 @@ body {
     border-radius: 25px !important;
 }
 
+#envoyer{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
 #cardItem {
     display: flex;
     flex-wrap: nowrap;
@@ -47,7 +52,11 @@ body {
     padding-top: 20px;
 }
 
-
+.form-label {
+    font-family: 'Nerko One', cursive; 
+    color: rgb(245, 128, 219) !important;
+    font-size: 30px;
+}
 
 .prix {
     color: rgb(110, 208, 238);
@@ -58,7 +67,7 @@ body {
     margin-bottom: 15px;
     font-size: 25px !important;
     font-family: 'Nerko One', cursive;
-    color: rgb(245, 128, 219) !important;
+    color: rgb(110, 208, 238) !important;
 }
 
 
@@ -88,7 +97,7 @@ body {
 
 .font {
     font-family: 'Nerko One', cursive;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(245, 128, 219) !important;
 }
 
@@ -96,6 +105,12 @@ body {
     height: 280px;
     border-radius: 25px 25px 0px 0px !important;
 
+}
+
+label  {
+    font-family: 'Nerko One', cursive;
+    color: rgb(110, 208, 238) !important;  
+    font-size: 25px;
 }
 
 #titre2 {
