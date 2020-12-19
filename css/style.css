@@ -1,6 +1,6 @@
 body {
     background-image: url("https://previews.123rf.com/images/amaomam/amaomam2003/amaomam200300021/141511950-teddy-bear-and-rainbow-seamless-background-repeating-pattern-wallpaper-background-cute-seamless-patt.jpg");
-    
+
 }
 
 .navbar {
@@ -11,7 +11,7 @@ body {
     border-radius: 25px !important;
 }
 
-#envoyer{
+#envoyer {
     margin-top: 30px;
     margin-bottom: 60px;
 }
@@ -22,11 +22,11 @@ body {
     justify-content: space-around;
     margin-bottom: 40px;
     padding-top: 20px;
-    
+
 }
 
 #teddy {
-    margin-top: 30px!important;
+    margin-top: 30px !important;
     margin-bottom: 40px !important;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .form-label {
-    font-family: 'Nerko One', cursive; 
+    font-family: 'Nerko One', cursive;
     color: rgb(245, 128, 219) !important;
     font-size: 30px;
 }
@@ -61,6 +61,7 @@ body {
 .prix {
     color: rgb(110, 208, 238);
     font-weight: 900;
+    font-size: 20px;
 }
 
 .form-control {
@@ -73,8 +74,10 @@ body {
 
 
 .card-body {
-    border-top: 1px solid rgb(110, 208, 238) ;
+    border-top: 1px solid rgb(110, 208, 238);
 }
+
+
 
 .btn:hover {
     box-shadow: 5px 5px 5px black;
@@ -97,8 +100,14 @@ body {
 
 .font {
     font-family: 'Nerko One', cursive;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(245, 128, 219) !important;
+}
+
+th {
+    font-family: 'Nerko One', cursive;
+    font-size: 30px;
+    color: rgb(245, 224, 128) !important;
 }
 
 .card img {
@@ -107,9 +116,9 @@ body {
 
 }
 
-label  {
+label {
     font-family: 'Nerko One', cursive;
-    color: rgb(110, 208, 238) !important;  
+    color: rgb(110, 208, 238) !important;
     font-size: 25px;
 }
 
@@ -119,4 +128,23 @@ label  {
 
 #footer {
     margin: 0;
+}
+
+#test img {
+    width: 40px !important;
+}
+
+#blockPanier h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    font-family: 'Nerko One', cursive;
+    color: black;
+    font-size: 40px;
+}
+
+#btnPanier {
+    display: flex;
+    justify-content: center;
+    width: 20%;
 }

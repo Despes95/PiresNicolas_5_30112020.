@@ -35,67 +35,84 @@
         </nav>
     </header>
 
-    <section class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto">
-                <h1 class="intro text-center m-2" id="teddy">Nounours tout doux</h1>
-                <p id="titre" class="intro-para text-center m-4">Validez votre panier</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="test" class="container-xl"></section>
- 
-
-
-
-    <section id="div1" class="container-xl">
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">Prenom</label>
-                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                <div class="valid-feedback">
-                    Looks good!
+    <main id="blockPanier">
+        <section class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <h1 class="intro text-center m-2" id="teddy">Nounours tout doux</h1>
+                    <p id="titre" class="intro-para text-center m-4">Validez votre panier</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="validationCustom02" value="" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
+        </section>
+
+        <section id="test" class="container-xl">
+            <table class="table text-center  bg-light">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                </tbody>
+                <tbody id="result">
+            </table>
+            <div>
+                <button onclick="removeProduct('${product}')" class="btn btn-primary">Vider le Panier <i
+                        class="fas fa-trash-alt"></i></button>
             </div>
-            <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Adresse Mail</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Veuillez choisir une adresse mail.
+        </section>
+
+
+
+
+        <section id="div1" class="container-xl">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="firstName" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">Adresse</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Veuillez choisir une adresse.
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="lastName" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">Ville</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Veuillez choisir une ville.
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Adresse Mail</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
+                            required>
+                        <div class="invalid-feedback">
+                            Veuillez choisir une adresse mail.
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 text-center">
-                <button id="envoyer" class="btn btn-primary" type="submit">Confirmation Panier</button>
-            </div>
-        </form>
-    </section>
-
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Adresse</label>
+                    <input type="text" class="form-control" id="adress" required>
+                    <div class="invalid-feedback">
+                        Veuillez choisir une adresse.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="city" required>
+                    <div class="invalid-feedback">
+                        Veuillez choisir une ville.
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button id="envoyer" class="btn btn-primary" type="submit">Confirmation Panier</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
 
 
@@ -117,6 +134,7 @@
     </script>
     <script src="js/requests.js" defer></script>
     <script src="js/panier.js" defer></script>
+    <script src="js/views.js" defer></script>
 </body>
 
 </html>

@@ -5,13 +5,13 @@ function displayProductItem(product) {
     const nameDisplayed = displayTitle(product)
     return `
     <div class="card text-center" style="max-width: 450px;">
-    ${imageDisplayed}
-    <div class="card-body">   
-        ${nameDisplayed}
-        ${priceDisplayed}
-        <a href="details.html?id=${product._id}" class="btn btn-primary">Choisis Moi</a>
+        ${imageDisplayed}
+        <div class="card-body">   
+            ${nameDisplayed}
+            ${priceDisplayed}
+            <a href="details.html?id=${product._id}" class="btn btn-primary">Choisis Moi</a>
+        </div>
     </div>
-</div>
 `
 }/////////////////// End Page Presentation teddies////////////////////////
 
@@ -38,37 +38,6 @@ function displayProductDetails(product) {
 </div>
 `
 }///////////////////End Page Presentation Teddies Selctionner////////////////////////
-
-/////////////////// Page Panier////////////////////////
-/* function displayProductPanier(product) {
-    const imageDisplayed = displayImage(product)
-    const priceDisplayed = displayPrice(product)
-    const nameDisplayed = displayTitle(product)
-    const descriptionDisplayed = displayDescription(product)
-    
-     return `
-    <table class="table bg-light">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Photo</th>
-            <th scope="col">Nom</th>
-            <th scope="col">Prix</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td><img id=panierImg class="img-fluid" src="${teddiesPanier[0].imageUrl}"  style="max-width: 40px;"></td>
-            <td><h5 class="font card-title">${teddiesPanier[0].name}</h5></td>
-            <td><p class="card-text prix">${teddiesPanier[0].price / 100}€</p></td>
-          </tr>
-        </tbody>
-      </table>
-      <td><button onclick="removeProduct('${product}')" class="btn btn-primary">Supprimer</button></td>
-` 
-} *////////////////////End Page Panier////////////////////////
-
 
 /////////////////// Fonction Image////////////////////////
 function displayImage(product) {
