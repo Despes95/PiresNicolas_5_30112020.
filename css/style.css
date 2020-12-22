@@ -1,7 +1,10 @@
 body {
-    background-image: url("https://previews.123rf.com/images/amaomam/amaomam2003/amaomam200300021/141511950-teddy-bear-and-rainbow-seamless-background-repeating-pattern-wallpaper-background-cute-seamless-patt.jpg");
-
+    background-image: url("/images/téléchargement.png");
+    
 }
+bg-image
+
+
 
 .navbar {
     box-shadow: 5px 5px 5px black;
@@ -147,4 +150,9 @@ label {
     display: flex;
     justify-content: center;
     width: 20%;
+}
+
+#orderId {
+    font-family: 'Nerko One', cursive;
+    font-size: 30px;
 }

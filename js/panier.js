@@ -9,7 +9,6 @@ function getTeddies() {
   return teddiesPanier;
 }
 
-
 function panierTeddies(teddies) {
   const panierStorage = document.getElementById("result")
   const main = document.getElementById("blockPanier");
@@ -30,27 +29,56 @@ function panierTeddies(teddies) {
 }
 
 
-const form = document.querySelector('.needs-validation')
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-  form.classList.add('was-validated');
-  const email = document.getElementById('email').value;
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const adress = document.getElementById('adress').value;
-  const city = document.getElementById('city').value;
-  const contact = { // On recupere les donnees renseigner du formulaire et on les mets dans l'objet "contact"
-    email,
-    firstName,
-    lastName,
-    adress,
-    city
-  }
-  console.log(contact)
-});
+function formValidate() {
+  const form = document.querySelector('.needs-validation')
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const contact = {
+      email: document.getElementById('email').value,
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      address: document.getElementById('address').value,
+      city: document.getElementById('city').value,
+    };
 
- 
+    let teddiesPanier = JSON.parse(localStorage.getItem("basketProducts"));
+    let products = [];
+    let productsId = teddiesPanier.map(product => product._id); //map
+    products.push(productsId);
+    let formData = {
+      contact,
+      products
+    };
+
+    console.log(formData)
+    const reponseOrder = fetch("http://localhost:3000/api/teddies/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(
+        formData
+      )
+    });
+
+    reponseOrder.then(async response => {
+      console.log(response);
+      let confirmation = await response.json();
+      console.log(confirmation);
+      if (response.ok) {
+        localStorage.setItem("confirm", JSON.stringify(confirmation));
+        window.location.href = "confirmation.html";
+      } else {
+        alert("Veuillez remplir le formulaire pour confirmer votre commande.");
+        form.classList.add('was-validated');
+      }
+    });
+  })
+}
+formValidate();
+
+
 
 /////////////////////////////////Vider Le Panier////////////////////////////////
 function removeProduct() {
