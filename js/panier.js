@@ -44,7 +44,7 @@ function formValidate() {
 
     let teddiesPanier = JSON.parse(localStorage.getItem("basketProducts"));
     let products = [];
-    let productsId = teddiesPanier.map(product => product._id); //map
+    let productsId = teddiesPanier
     products.push(productsId);
     let formData = {
       contact,
