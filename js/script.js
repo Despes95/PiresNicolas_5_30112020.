@@ -7,7 +7,7 @@ function displayList(products, root) {
 }
 
 (async function() {
-    const productsList = await fetchData() //attente de l'appi pour productsList
+    const productsList = await fetchData() 
     const productsJson = await toJson(productsList)
     var container = document.getElementsByClassName("container-xl")[0]
     displayList(productsJson, container)

@@ -54,7 +54,7 @@
                         <th>Prix</th>
                     </tr>
                 </thead>
-                </tbody>
+                <tbody>
                 <tbody id="result">
             </table>
             <div>
@@ -70,23 +70,29 @@
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Prenom</label>
-                    <input type="text" class="form-control" id="firstName" value="" required>
+                    <input type="text" pattern="[A-Za-z]{3,}" class="form-control" id="firstName" value="" required>
                     <div class="valid-feedback">
-                        Looks good!
+                        ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Minimun 3 caracteres.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom02" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="lastName" value="" required>
+                    <input type="text" pattern="[A-Za-z]{3,}" class="form-control" id="lastName" value="" required>
                     <div class="valid-feedback">
-                        Looks good!
+                        ok
+                    </div>
+                    <div class="invalid-feedback">
+                        Minimun 3 caracteres.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Adresse Mail</label>
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
+                        <input type="text" pattern="[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+\.[a-zA-Z]{2,10}" class="form-control" id="email" aria-describedby="inputGroupPrepend"
                             required>
                         <div class="invalid-feedback">
                             Veuillez choisir une adresse mail.

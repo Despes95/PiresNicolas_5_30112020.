@@ -6,7 +6,7 @@ function displayProduct(product, container) {
 
   const elt = document.getElementById('btn');
   elt.addEventListener('click', function () {
-    let storageProduct = JSON.parse(localStorage.getItem('basketProducts')) /*  || [] */ ; /* ? JSON.parse(localStorage.getItem('basketProducts')) : []; http: www.finalclap.com / faq / 316 - javascript - operateur - ternaire */
+    let storageProduct = JSON.parse(localStorage.getItem('basketProducts')); // http: www.finalclap.com / faq / 316 - javascript - operateur - ternaire
     if (storageProduct === null){
       storageProduct = [];
   }

@@ -64,7 +64,6 @@ function displayOption(product) {
     let options = ''
     for (let color of product.colors) {
         options += `<option>${color}</option>`
-        console.log("${color}")
     }
     return `<select id= "option" class="form-control">${options}</select>`
 }

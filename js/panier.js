@@ -34,6 +34,7 @@ function formValidate() {
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     event.stopPropagation();
+    form.classList.add('was-validated');
     const contact = {
       email: document.getElementById('email').value,
       firstName: document.getElementById('firstName').value,
@@ -52,7 +53,7 @@ function formValidate() {
     };
 
     console.log(formData)
-    const reponseOrder = fetch("http://localhost:3000/api/teddies/order", {
+    const confirmationOrder = fetch("http://localhost:3000/api/teddies/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -62,21 +63,22 @@ function formValidate() {
       )
     });
 
-    reponseOrder.then(async response => {
+    confirmationOrder.then(async response => {
       console.log(response);
       let confirmation = await response.json();
       console.log(confirmation);
-      if (response.ok) {
+      if (form.checkValidity() === false) { 
+        alert("Certains champs du formulaire ne sont pas bien remplis");
+      } else if (form.checkValidity() === true) { 
         localStorage.setItem("confirm", JSON.stringify(confirmation));
         window.location.href = "confirmation.html";
-      } else {
-        alert("Veuillez remplir le formulaire pour confirmer votre commande.");
-        form.classList.add('was-validated');
       }
     });
   })
 }
 formValidate();
+
+
 
 
 
