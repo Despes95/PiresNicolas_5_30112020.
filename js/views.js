@@ -1,4 +1,4 @@
-/////////////////// Page Presentation teddies////////////////////////
+/////////////////// Page Presentation index////////////////////////
 function displayProductItem(product) {
     const imageDisplayed = displayImage(product)
     const priceDisplayed = displayPrice(product)
@@ -11,9 +11,8 @@ function displayProductItem(product) {
             ${priceDisplayed}
             <a href="details.html?id=${product._id}" class="btn btn-primary">Choisis Moi</a>
         </div>
-    </div>
-`
-}/////////////////// End Page Presentation teddies////////////////////////
+    </div>`
+}/////////////////// End Page Presentation index////////////////////////
 
 
 
@@ -35,8 +34,7 @@ function displayProductDetails(product) {
     <div class="form-group">
         <a href="" id="btn" class="btn btn-primary"><i class="fas fa-cart-arrow-down">
         </i> Ajouter au panier</a>
-</div>
-`
+</div>`
 }///////////////////End Page Presentation Teddies Selctionner////////////////////////
 
 /////////////////// Fonction Image////////////////////////

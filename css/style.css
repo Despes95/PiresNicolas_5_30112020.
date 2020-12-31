@@ -2,9 +2,6 @@ body {
     background-image: url("/images/téléchargement.png");
     
 }
-bg-image
-
-
 
 .navbar {
     box-shadow: 5px 5px 5px black;
@@ -27,6 +24,11 @@ bg-image
     padding-top: 20px;
 
 }
+
+.confirmEmptyBtn {
+    margin-top: 30%;
+}
+
 
 #teddy {
     margin-top: 30px !important;
@@ -74,13 +76,21 @@ bg-image
     color: rgb(110, 208, 238) !important;
 }
 
-
+span {
+    color: rgb(245, 128, 219) !important;   
+}
 
 .card-body {
     border-top: 1px solid rgb(110, 208, 238);
 }
 
+.confirmPara {
+margin-top: 30%;
+}
 
+#totalPrice {
+    pointer-events: none;
+}
 
 .btn:hover {
     box-shadow: 5px 5px 5px black;
