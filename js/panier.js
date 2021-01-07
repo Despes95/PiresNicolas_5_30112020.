@@ -3,7 +3,6 @@ function getTeddies() {
   let teddiesPanier = JSON.parse(localStorage.getItem("basketProducts"));
   return teddiesPanier;
 }
-
 /////////////////////////////////fonction affichage du panier/recuperation teddies////////////////////////////////
 function displayPanier() {
   let teddies = getTeddies();
@@ -29,6 +28,7 @@ function panierTeddies(teddies) {
         <td id="panierPrice">${displayPrice(product)}</td>
       </tr> `;
     }
+    /////////////////////////////////fonction Prix total////////////////////////////////////////////////////
     function ShowPrice() {
       let totalPrice = 0;
       teddies.forEach(item => {
@@ -41,9 +41,6 @@ function panierTeddies(teddies) {
     }
     ShowPrice();
   }
-
-  /////////////////////////////////fonction Prix total////////////////////////////////////////////////////
-  
 }
 
 
@@ -61,6 +58,7 @@ function formValidate() {
     let city = document.getElementById("city").value;
     let email = document.getElementById("email").value;
 
+    ////////////////////////////////regex////////////////////////////////////
     if (/[0-9]/.test(firstName) || /[§!@#$%^&*().?":{}|<>]/.test(firstName) || !firstName)
       formIsInvalid += "Votre prénom est invalide \n";
     if (/[0-9]/.test(lastName) || /[§!@#$%^&*().?":{}|<>]/.test(lastName) || !lastName)
@@ -73,7 +71,8 @@ function formValidate() {
       formIsInvalid += "Votre mail est invalide \n";
     if (formIsInvalid)
       alert("Erreur : \n" + formIsInvalid);
-    
+      
+    ///////////////////////////Recuperation contatc///////////////////////
     else {
       let contact = {
         email: document.getElementById('email').value,
