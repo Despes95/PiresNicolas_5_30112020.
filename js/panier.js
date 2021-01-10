@@ -127,8 +127,12 @@ function removeProduct() {
 
 /////////////////////////////////Fonction asynchrone////////////////////////////////////////////////////////
 (async function () {
+  try {
   const productsPanier = await fetch(`http://localhost:3000/api/teddies`)
   const productsJson = await productsPanier.json(productsPanier)
   var container = document.getElementsByClassName("container-xl")[0]
   displayPanier(productsJson, container)
+} catch (e) {
+  alert("Probleme de connection avec le serveur")
+}
 })()

@@ -9,8 +9,13 @@ function displayList(products, root) {
 
 /////////////////////////////////Fonction asynchrone////////////////////////////////
 (async function() { 
+    try {
     const response = await fetch(`http://localhost:3000/api/teddies`) 
     const productsJson = await response.json()
     var container = document.getElementsByClassName("container-xl")[0]
     displayList(productsJson, container)
+    } catch (e) {
+        alert("Probleme de connection avec le serveur")
+        
+      }
 })()

@@ -15,7 +15,6 @@ function displayProduct(product, container) {
     storageProduct.push(product); // on push le teddies selectionner dans le tableau
     console.log(JSON.stringify([product]));
     localStorage.setItem('basketProducts', JSON.stringify(storageProduct));
-    alert('ajouté au panier');
   });
 }
 
@@ -23,10 +22,14 @@ function displayProduct(product, container) {
 
 /////////////////////////////////Fonction asynchrone////////////////////////////////
 (async function () { 
+  try {
   const searchParams = new URLSearchParams(document.location.search) // Récupérer le parametre de recherche dans l'URL de la page -> site.com/produit?id=id1&nom='peluche1' => [{ id: 'id1}, { nom: 'peluche1' }]
   const id = searchParams.get('id') // 'id1'
   const productDetail = await fetch(`http://localhost:3000/api/teddies/${id}`) // Récupérer les données du serveur
   const productJson = await productDetail.json(productDetail) // Formatter les données en JSON 
   var container = document.getElementsByClassName("container-xl")[0]
   displayProduct(productJson, container)
+} catch (e) {
+  alert("Probleme de connection avec le serveur")
+}
 })()
